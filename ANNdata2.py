@@ -8,8 +8,8 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import tensorflow as tf
 
 # Load the ANN model from file
-model = tf.keras.models.load_model('app/modelanndata2.h5')
-scaler = pickle.load(open('app/scalerdata2.pkl', 'rb'))
+model = tf.keras.models.load_model('modelanndata2.h5')
+scaler = pickle.load(open('scalerdata2.pkl', 'rb'))
     
 # Function to make predictions
 def predict(preprocessed_data,location):
