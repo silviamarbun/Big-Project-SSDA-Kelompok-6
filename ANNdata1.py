@@ -11,8 +11,8 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import tensorflow as tf
 
 # Load the ANN model from file
-model = tf.keras.models.load_model('app/ann.h5')
-scaler = pickle.load(open('app/scaler.pkl', 'rb'))
+model = tf.keras.models.load_model('ann.h5')
+scaler = pickle.load(open('scaler.pkl', 'rb'))
     
 # Function to make predictions
 def predict(preprocessed_data,age):
