@@ -1,3 +1,6 @@
+import streamlit as st
+import streamlit.components.v1 as stc
+
 from sklearn import model_selection
 import streamlit as st
 import pickle
