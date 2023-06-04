@@ -24,24 +24,38 @@ def predict(preprocessed_data,location):
 # Main function
 def main():
     # Set the title and description of your web app
-    st.title("ANN Prediction App")
+    st.markdown('<h1 style="font-size: 32px;">Artificial Neural Network (ANN) Prediction APP</h1>', unsafe_allow_html=True)
+
+    st.write("""
+        <h2>Deployment Data 2 Kelompok 6</h2>
+        <h3>With US State Covid-19 Vaccination Dataset</h3>
+    """, unsafe_allow_html=True)
+    st.image("skynews_covid19.png", caption="Credit to Sky News ", use_column_width=True)
+
     st.write("Enter the input data to get predictions.")
 
+
     # Get user input
-    Total_vaccinations = st.number_input("Total_vaccination", value=0.0)
-    Total_distributed = st.number_input("total_distributed", value=0.0)
-    People_vaccinated = st.number_input("people_vaccinated", value=0.0)
-    People_fully_vaccinated_per_hundred = st.number_input("people_fully_vaccinated_per_hundred", value=0.0)
-    Total_vaccinations_per_hundred = st.number_input("total_vaccinations_per_hundred", value=0.0)
-    People_fully_vaccinated = st.number_input("people_fully_vaccinated", value=0.0)
-    People_vaccinated_per_hundred = st.number_input('people_vaccinated_per_hundred', value=0.0)
-    Distributed_per_hundred = st.number_input('distributed_per_hundred', value=0.0)
-    Daily_vaccinations_raw = st.number_input('daily_vaccinations_raw', value=0.0)
-    Daily_vaccinations = st.number_input('daily_vaccinations', value=0.0)
-    Daily_vaccinations_per_million = st.number_input('daily_vaccinations_per_million', value=0.0)
-    Share_doses_used = st.number_input("share_doses_used", value=0.0)
-    Total_boosters = st.number_input("total_boosters", value=0.0)
-    Total_boosters_per_hundred = st.number_input("total_boosters_per_hundred", value=0.0)
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        Total_vaccinations = st.number_input("Total_vaccination", value=0.0)
+        Total_distributed = st.number_input("total_distributed", value=0.0)
+        People_vaccinated = st.number_input("people_vaccinated", value=0.0)
+        People_fully_vaccinated_per_hundred = st.number_input("people_fully_vaccinated_per_hundred", value=0.0)
+        Total_vaccinations_per_hundred = st.number_input("total_vaccinations_per_hundred", value=0.0)
+        People_fully_vaccinated = st.number_input("people_fully_vaccinated", value=0.0)
+        People_vaccinated_per_hundred = st.number_input('people_vaccinated_per_hundred', value=0.0)
+        
+    with col2:
+        Distributed_per_hundred = st.number_input('distributed_per_hundred', value=0.0)
+        Daily_vaccinations_raw = st.number_input('daily_vaccinations_raw', value=0.0)
+        Daily_vaccinations = st.number_input('daily_vaccinations', value=0.0)
+        Daily_vaccinations_per_million = st.number_input('daily_vaccinations_per_million', value=0.0)
+        Share_doses_used = st.number_input("share_doses_used", value=0.0)
+        Total_boosters = st.number_input("total_boosters", value=0.0)
+        Total_boosters_per_hundred = st.number_input("total_boosters_per_hundred", value=0.0)
+    
     Location = st.number_input("location", value=0.0)
     
     
