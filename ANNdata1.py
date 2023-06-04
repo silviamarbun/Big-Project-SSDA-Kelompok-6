@@ -23,18 +23,30 @@ def predict(preprocessed_data,age):
 # Main function
 def main():
     # Set the title and description of your web app
-    st.title("ANN Prediction App")
+    st.markdown('<h1 style="font-size: 32px;">Artificial Neural Network (ANN) Prediction APP</h1>', unsafe_allow_html=True)
+    st.write("""
+        <h2>Deployment Data 1 Kelompok 6</h2>
+        <h3>With Vaccination Rates Overtime by Ages Dataset</h3>
+    """, unsafe_allow_html=True)
+    st.image("age_group.png", caption="Credit to IconScout ", use_column_width=True)
+
     st.write("Enter the input data to get predictions.")
 
     # Get user input
-    sinovac_1st_dose = st.number_input("Sinovac 1st dose", value=0)
-    sinovac_2nd_dose = st.number_input("Sinovac 2nd dose", value=0)
-    sinovac_3rd_dose = st.number_input("Sinovac 3rd dose", value=0)
-    sinovac_4rd_dose = st.number_input('Sinovac 4th dose', value=0)
-    biontech_1st_dose = st.number_input("BioNTech 1st dose", value=0)
-    biontech_2nd_dose = st.number_input("BioNTech 2nd dose", value=0)
-    biontech_3rd_dose = st.number_input("BioNTech 3rd dose", value=0)
-    biontech_4rd_dose = st.number_input("BioNTech 4rd dose", value=0)
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        sinovac_1st_dose = st.number_input("Sinovac 1st dose", value=0)
+        sinovac_2nd_dose = st.number_input("Sinovac 2nd dose", value=0)
+        sinovac_3rd_dose = st.number_input("Sinovac 3rd dose", value=0)
+        sinovac_4rd_dose = st.number_input('Sinovac 4th dose', value=0)
+    
+    with col2:
+        biontech_1st_dose = st.number_input("BioNTech 1st dose", value=0)
+        biontech_2nd_dose = st.number_input("BioNTech 2nd dose", value=0)
+        biontech_3rd_dose = st.number_input("BioNTech 3rd dose", value=0)
+        biontech_4rd_dose = st.number_input("BioNTech 4rd dose", value=0)
+    
     age = st.number_input("Age Group", value=0)
     
     
