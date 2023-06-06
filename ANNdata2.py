@@ -30,7 +30,7 @@ def main():
         <h2>Deployment Data 2 Kelompok 6</h2>
         <h3>With US State Covid-19 Vaccination Dataset</h3>
     """, unsafe_allow_html=True)
-    st.image("skynews_covid19.png", caption="Credit to Sky News ", use_column_width=True)
+    st.image("us_vacpict.png", caption="Pict Credit to Bloomberg.com ", use_column_width=True)
 
     st.write("Enter the input data to get predictions.")
 
