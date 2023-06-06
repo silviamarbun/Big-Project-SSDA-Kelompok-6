@@ -28,7 +28,7 @@ def main():
         <h2>Deployment Data 1 Kelompok 6</h2>
         <h3>With Vaccination Rates Overtime by Ages Dataset</h3>
     """, unsafe_allow_html=True)
-    st.image("age_group.png", caption="Credit to IconScout ", use_column_width=True)
+    st.image("age_group.png", caption="Pict Credit to IconScout ", use_column_width=True)
 
     st.write("Enter the input data to get predictions.")
 
