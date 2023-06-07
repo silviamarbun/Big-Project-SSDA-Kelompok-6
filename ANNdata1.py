@@ -7,11 +7,10 @@ import pickle
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
-
 import tensorflow as tf
 
 # Load the ANN model from file
-model = tf.keras.models.load_model('ann.h5')
+model = tf.keras.models.load_model('anndata1.h5')
 scaler = pickle.load(open('scaler.pkl', 'rb'))
     
 # Function to make predictions
