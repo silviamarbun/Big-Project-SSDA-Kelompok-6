@@ -56,7 +56,7 @@ def main():
         Total_boosters = st.number_input("total_boosters", value=0.0)
         Total_boosters_per_hundred = st.number_input("total_boosters_per_hundred", value=0.0)
     
-    Location = st.number_input("location", value=0.0)
+    Location = st.number_input("location", value=0)
     
     
     # Preprocess the input data
