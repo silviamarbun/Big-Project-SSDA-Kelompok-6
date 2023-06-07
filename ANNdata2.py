@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import tensorflow as tf
 
 # Load the ANN model from file
-model = tf.keras.models.load_model('modelanndata2.h5')
+model = tf.keras.models.load_model('anndata2.h5')
 scaler = pickle.load(open('scalerdata2.pkl', 'rb'))
     
 # Function to make predictions
@@ -33,7 +33,6 @@ def main():
     st.image("us_vacpict.png", caption="Pict Credit to Bloomberg.com ", use_column_width=True)
 
     st.write("Enter the input data to get predictions.")
-
 
     # Get user input
     col1, col2 = st.columns(2)
