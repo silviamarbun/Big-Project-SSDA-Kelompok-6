@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import tensorflow as tf
 
 # Load the ANN model from file
-model = tf.keras.models.load_model('anndata1.h5')
+model = tf.keras.models.load_model('annmodel1.h5')
 scaler = pickle.load(open('scaler.pkl', 'rb'))
     
 # Function to make predictions
@@ -18,6 +18,21 @@ def predict(preprocessed_data,age):
     # Make predictions using the loaded model
     predictions = model.predict([[preprocessed_data[0][0],preprocessed_data[0][1],preprocessed_data[0][2],preprocessed_data[0][3],preprocessed_data[0][4],preprocessed_data[0][5],preprocessed_data[0][6],preprocessed_data[0][7], age]])
     return predictions
+
+# Menampilkan foto dengan frame bulat
+st.sidebar.image('kel6.png', use_column_width=True, caption='Kelompok 6 Kelas A')
+
+# Menampilkan nama kelompok
+st.sidebar.markdown('Keterangan Variabel Age Group:')
+st.sidebar.markdown('- 0-11 th = 0')
+st.sidebar.markdown('- 12-19 th = 1')
+st.sidebar.markdown('- 20-29 th = 2')
+st.sidebar.markdown('- 30-39 th = 3')
+st.sidebar.markdown('- 40-49 th = 4')
+st.sidebar.markdown('- 50-59 th = 5')
+st.sidebar.markdown('- 60-69 th = 6')
+st.sidebar.markdown('- 70-79 th = 7')
+st.sidebar.markdown('- 80 and above = 8')
 
 # Main function
 def main():
