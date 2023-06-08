@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import tensorflow as tf
 
 # Load the ANN model from file
-model = tf.keras.models.load_model('annmodel2.h5')
+model = tf.keras.models.load_model('annmodel2new.h5')
 scaler = pickle.load(open('scaler2.pkl', 'rb'))
     
 # Function to make predictions
