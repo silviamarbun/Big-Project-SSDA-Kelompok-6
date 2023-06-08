@@ -12,7 +12,7 @@ import tensorflow as tf
 
 # Load the ANN model from file
 model = tf.keras.models.load_model('annmodel2.h5')
-scaler = pickle.load(open('scalerdata2.pkl', 'rb'))
+scaler = pickle.load(open('scaler2.pkl', 'rb'))
     
 # Function to make predictions
 def predict(preprocessed_data,location):
